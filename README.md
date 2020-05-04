@@ -5,7 +5,7 @@ The Guessing Game is a small, but a complete command-line application. It has a 
 
 ## Installation
 
-Use the package manager [sbt](https://www.scala-sbt.org/download.html) to install sbt.
+Use the official installer [sbt](https://www.scala-installer.org/download.html) to install sbt.
 
 ```bash
 brew install sbt
