@@ -24,3 +24,5 @@ cd /path/to/repo
 sbt run
 
 ```
+## License
+[Scala-From-Scratch](https://leanpub.com/scala-from-scratch-exploration)
