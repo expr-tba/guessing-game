@@ -3,12 +3,11 @@ package guessinggame.core.presentation
 import guessinggame.core.domain.{GuessableNumber, Hint}
 
 /**
- * Developed by Bia.
- */
-
+  * Developed by Bia.
+  */
 object Presentation {
-	val introduction: String =
-	"""
+  val introduction: String =
+    """
 		| #####                                                  #####
 		|#     # #    # ######  ####   ####  # #    #  ####     #     #   ##   #    # ######
 		|#       #    # #      #      #      # ##   # #    #    #        #  #  ##  ## #
@@ -23,27 +22,27 @@ object Presentation {
 		|# You have five attempts. Good Luck!
 		|""".stripMargin('#')
 
-	val prompt: String = "\n> "
+  val prompt: String = "\n> "
 
-	val invalidNumber: String =
-		"\nPlease enter a number between 1 and 100."
+  val invalidNumber: String =
+    "\nPlease enter a number between 1 and 100."
 
-	def successMessage(number: GuessableNumber): String =
-		s"\nThat's damn right! ${number.value} it is!"
+  def successMessage(number: GuessableNumber): String =
+    s"\nThat's damn right! ${number.value} it is!"
 
-	def hint(guess: GuessableNumber, hint: Hint): String = {
-		val comparator = hint match {
-			case Hint.TooHigh => "lower"
-			case Hint.TooLow => "higher"
-		}
-		s"""
+  def hint(guess: GuessableNumber, hint: Hint): String = {
+    val comparator = hint match {
+      case Hint.TooHigh => "lower"
+      case Hint.TooLow  => "higher"
+    }
+    s"""
 			 |Your guess ${guess.value}, is wrong.
 			 |The target number is $comparator than that!
 			 |""".stripMargin
-	}
+  }
 
-	val gameOver: String =
-		"""
+  val gameOver: String =
+    """
 			| #####                          #######
 			|#     #   ##   #    # ######    #     # #    # ###### #####
 			|#        #  #  ##  ## #         #     # #    # #      #    #
@@ -53,7 +52,6 @@ object Presentation {
 			| #####  #    # #    # ######    #######   ##   ###### #    #
 			|""".stripMargin
 
-	val problemWithSetup: String =
-		"There was a problem setting up the game! The game will exit..."
-
+  val problemWithSetup: String =
+    "There was a problem setting up the game! The game will exit..."
 }

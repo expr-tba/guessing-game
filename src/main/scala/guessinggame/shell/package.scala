@@ -1,10 +1,8 @@
 package guessinggame
 
 /**
- * Developed by Bia.
- */
-
+  * Developed by Bia.
+  */
 package object shell {
-	type InputReader = String => String
-
+  type InputReader = String => String
 }
